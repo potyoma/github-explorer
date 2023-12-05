@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input {
+    all: unset;
+    border-radius: 4px;
+    background-color: black;
+    opacity: 0.2;
+    border: 2px solid black;
+    padding: 5px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.input:focus {
+    opacity: 1;
+    background: none;
+}
+
+.input::placeholder {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.input:focus::placeholder {
+    color: var(--light-gray);
+}
+
+.label {
+    font-size: 0.9rem;
+    position: absolute;
+    top: -0.5rem;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px 3px;
+    border-radius: 5px;
+}
