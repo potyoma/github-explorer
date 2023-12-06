@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    gap: 1rem;
+}
+
+.repositories {
+    flex-grow: 2;
+}
