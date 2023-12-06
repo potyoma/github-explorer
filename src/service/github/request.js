@@ -1,7 +1,14 @@
 const TOKEN = import.meta.env.VITE_GITHUB_TOKEN
 
-const request = (method) => async (path) =>
-    await fetch(`/api/github/${path}`, {
+const buildParams = (params) => {
+    if (!params) return ''
+
+    const searchParams = new URLSearchParams(params)
+    return `?${searchParams.toString()}`
+}
+
+const request = (method) => async (path, params) =>
+    await fetch(`/api/github/${path}${buildParams(params)}`, {
         method: method ?? 'GET',
         headers: {
             Accept: 'application/vnd.github+json',
