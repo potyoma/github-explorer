@@ -1,10 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './pages/home'
+import { RouterProvider } from 'react-router-dom'
 import Layout from './Layout'
-import NotFound from './pages/not-found'
-import router from "./router"
+import router from './router'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
