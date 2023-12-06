@@ -9,10 +9,3 @@
     border-radius: 1rem;
     max-width: 300px;
 }
-
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding-left: 1rem;
-}
