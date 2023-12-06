@@ -21,7 +21,7 @@ export default function Branches({
             setLoading(true)
             const foundBranches = await getBranches(username, repository)
             !foundBranches && onError?.()
-            foundBranches && setBranches(branches)
+            foundBranches && setBranches(foundBranches)
             setLoading(false)
         })()
     }, [username, repository])
