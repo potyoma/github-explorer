@@ -1,0 +1,10 @@
+.list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.current {
+    transition: all 0.4s;
+    transform: translateY(-3px) scale(1.05);
+}
