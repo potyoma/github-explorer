@@ -1,11 +1,16 @@
 import { get } from './request'
+import { countPages } from '../../utils'
 
-export const getRepositories = async (username, limit) => {
-    const params = { sort: 'updated' }
-    limit && (params.per_page = limit)
-    const response = await get(`users/${username}/repos`, params)
+export const getRepositories = async (
+    username,
+    type = 'repos',
+    page = 1,
+    limit = 10
+) => {
+    const params = { sort: 'updated', per_page: limit, page }
+    const response = await get(`users/${username}/${type}`, params)
 
-    if (response.status !== 200) return
+    if (response.status !== 200) return []
 
     const json = await response.json()
 
@@ -16,5 +21,5 @@ export const getRepositories = async (username, limit) => {
         user: { username: repo.owner.login },
     }))
 
-    return mapped
+    return [mapped, countPages(response.headers)]
 }
