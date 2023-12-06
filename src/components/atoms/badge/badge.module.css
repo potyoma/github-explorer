@@ -1,0 +1,5 @@
+.badge {
+    border-radius: 1rem;
+    background-color: var(--dark-gray);
+    padding: 0.2rem 0.5rem;
+}
