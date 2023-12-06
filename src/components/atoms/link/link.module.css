@@ -1,0 +1,16 @@
+.link {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+    width: fit-content;
+    transition: transform 0.4s;
+}
+
+.link:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.link:active {
+    transform: scale(0.9);
+}
