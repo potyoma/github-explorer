@@ -5,4 +5,9 @@
 
 .repositories {
     flex-grow: 2;
+    padding: .5rem;
+}
+
+.repoHeading {
+    margin: 0.5rem 0;
 }
