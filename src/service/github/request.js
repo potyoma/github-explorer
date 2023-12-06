@@ -1,5 +1,8 @@
 const TOKEN = import.meta.env.VITE_GITHUB_TOKEN
 
+const isServer = typeof window !== 'object'
+const GITHUB_PATH = isServer ? 'https://api.github.com' : '/api/github'
+
 const buildParams = (params) => {
     if (!params) return ''
 
@@ -8,7 +11,7 @@ const buildParams = (params) => {
 }
 
 const request = (method) => async (path, params) =>
-    await fetch(`/api/github/${path}${buildParams(params)}`, {
+    await fetch(`${GITHUB_PATH}/${path}${buildParams(params)}`, {
         method: method ?? 'GET',
         headers: {
             Accept: 'application/vnd.github+json',
