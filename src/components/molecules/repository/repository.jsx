@@ -8,13 +8,12 @@ import TruncatedText from '../truncated-text'
 export default function Repository({ repo }) {
     const {
         name,
-        repoName,
         user: { username },
     } = repo
 
     return (
         <div className={clsx('content', s.container)}>
-            <Link href={`/repository/${name}`}>
+            <Link href={`/repository/${username}/${name}`}>
                 <h3>
                     <TruncatedText content={name} />
                 </h3>
