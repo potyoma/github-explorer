@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/(.*)",
+            "destination": "/"
+        },
+        {
             "source": "/api/github/:match",
             "destination": "https://api.github.com/:match"
         }

@@ -7,6 +7,7 @@ import Home from './pages/home'
 import NotFound from './pages/not-found/not-found'
 import Profile from './pages/profile'
 import StarredRepositories from './pages/starred-repositories'
+import RepoPage from './pages/repo-page'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -15,7 +16,12 @@ const router = createBrowserRouter(
                 <Route index element={<Home />}></Route>
                 <Route path='error' element={<NotFound />}></Route>
                 <Route path=':username' element={<Profile />}></Route>
-                <Route path='starred/:username' element={<StarredRepositories />}></Route>
+                <Route
+                    path='starred/:username'
+                    element={<StarredRepositories />}></Route>
+                <Route
+                    path='repository/:username/:repository'
+                    element={<RepoPage />}></Route>
             </Route>
         </Route>
     )
