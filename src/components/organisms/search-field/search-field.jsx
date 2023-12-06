@@ -7,7 +7,7 @@ import Button from '../../atoms/button'
 import s from './search-field.module.css'
 
 export default function SearchField({ onSubmit }) {
-    const [query, setQuery] = useState()
+    const [query, setQuery] = useState('')
     const [error, setError] = useState()
 
     const handleChange = ({ target: { value } }) => setQuery(value)
