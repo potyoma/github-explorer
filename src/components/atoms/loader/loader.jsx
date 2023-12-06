@@ -1,9 +1,5 @@
-import 'ldrs/quantum'
+import { DotLoader } from 'react-spinners'
 
 export default function Loader({ children, loading }) {
-    return loading ? (
-        <l-quantum size='45' speed='1.75' color='#e5e6e6'></l-quantum>
-    ) : (
-        children
-    )
+    return loading ? <DotLoader color='#e5e6e6' /> : children
 }
