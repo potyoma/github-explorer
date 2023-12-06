@@ -7,11 +7,16 @@
     transition: transform 0.4s;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
     opacity: 0.5;
     transform: scale(1.1);
 }
 
 .button:active {
     transform: scale(0.9);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: default;
 }
