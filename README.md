@@ -9,4 +9,6 @@ Currently, two official plugins are available:
 
 ## Run app
 
+Put variable `VITE_GITHUB_TOKEN` in `.env` file with value of your GitHub personal access token.
+
 Open terminal in project folder and execute `npm run dev` for dev mode. For tests run `npm run test`
