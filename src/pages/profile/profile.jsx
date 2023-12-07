@@ -13,7 +13,7 @@ export default function Profile() {
 
     return (
         <div className={s.container}>
-            <div>
+            <div className={s.userInfo}>
                 <UserInfo onError={handleError} username={username} />
             </div>
             <div className={clsx(s.repositories, 'content')}>

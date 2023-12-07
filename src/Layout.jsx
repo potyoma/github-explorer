@@ -8,7 +8,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Header className={clsx('nav', 'header')} />
-            <main>{children}</main>
+            <main className='main'>{children}</main>
             <Footer className={clsx('nav', 'footer')} />
         </>
     )

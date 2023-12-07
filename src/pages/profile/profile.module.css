@@ -1,13 +1,20 @@
 .container {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
 .repositories {
     flex-grow: 2;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .repoHeading {
     margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 400px) {
+    .container {
+        flex-direction: row;
+    }
 }

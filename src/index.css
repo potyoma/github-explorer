@@ -94,3 +94,8 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.main {
+    max-height: calc(100dvh - 200px);
+    overflow-y: scroll;
+}
