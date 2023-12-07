@@ -3,7 +3,7 @@ import { get } from './request'
 export const getUserInfo = async (username) => {
     const response = await get(`users/${username}`)
 
-    if (response.status !== 200) return
+    if (response.status !== 200) return null
 
     const json = await response.json()
 
