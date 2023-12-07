@@ -98,4 +98,10 @@ a {
 .main {
     max-height: calc(100dvh - 200px);
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
